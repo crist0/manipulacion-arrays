@@ -39,6 +39,7 @@ footer{
   display: inline-flex;
   flex-wrap: wrap;
   width:100%;
+  gap:20px;
 }
 .box-one{
   flex-basis: 33%;
@@ -67,8 +68,9 @@ button, a.button{
   padding:10px 25px;
   border-radius: 4px;
   border:none;
+  margin-bottom: 15px;;
 }
-button:hover, button:focus{
+button:hover, button:focus,a.button:hover, a.button:focus{
   background-color: var(--blue);
   color: var(--white);
   cursor: pointer;
