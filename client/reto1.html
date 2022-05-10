@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Reto 1: Tareas</title>
+</head>
+<body>
+  <header>
+    <h1><a href="index.html">Curso de manipulación de Arrays en JavaScript</a></h1>
+  </header>
+  <main>
+    <h2>Reto de Tareas con forEach</h2>
+    <div id="app"></div>
+  </main>
+  <footer>Creado por crist0</footer>
+  <script>
+    const tareas = [
+      {title: 'Correr', state: true},
+      {title: 'Desayunar', state: true},
+      {title: 'Revisar correos', state: true},
+      {title: 'Clases de Platzi', state: false},
+      {title: 'Almorzar', state: false},
+      {title: 'Trabajar', state: false},
+      {title: 'Jugar Rugby', state: false},
+      {title: 'Cenar', state: false},
+    ];
+
+    const app = document.getElementById('app');
+    const nodes = [];
+    tareas.forEach(e => {
+      const wrapper = document.createElement('div');
+      const node = document.createElement('label');
+      const check = document.createElement('input');
+      check.type = 'checkbox';
+      check.checked = e.state;
+      node.innerText += `${e.title}`;
+      node.append(check);
+      wrapper.append(node);
+      app.appendChild(wrapper);
+    });
+  </script>
+</body>
+</html>
