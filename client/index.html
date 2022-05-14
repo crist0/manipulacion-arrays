@@ -16,6 +16,7 @@
     <div class="box-all">
       <div class="box-one">
         <h3>forEach</h3>
+        <p>Hace un recorrido por cada elemento del array</p>
         <div class="code">
           <p>Código ejemplo:</p>
           <code>array.forEach(item => console.log(item));</code>
@@ -25,11 +26,63 @@
       </div>
       <div class="box-one">
         <h3>Map</h3>
+        <p>Recorrido y modifica cada elemento del array</p>
         <div class="code">
           <p>Código ejemplo:</p>
           <code>const nuevoArray = letters.map(item => item + '++');</code>
         </div>
         <a href="02-map.html">02-map.html</a>
+      </div>
+      <div class="box-one">
+        <h3>Filter</h3>
+        <p>Filtra en un nuevo array los elementos que cumplan con la condición</p>
+        <div class="code">
+          <p>Código ejemplo:</p>
+          <code>const nuevoArray = letters.filter(item => item.total >= 100);</code>
+        </div>
+      </div>
+      <div class="box-one">
+        <h3>reduce</h3>
+        <p>Reduce a un objeto o valor los elementos del array realizando la condición, ejemplo</p>
+        <div class="code">
+          <p>Código ejemplo:</p>
+          <code>const total = numArray.reduce((suma, item) => suma + item, 0);</code>
+        </div>
+        <a class="button" href="reto-2.html">Reto</a>
+        <a href="05-reduce.html">05-reduce.html</a>
+      </div>
+      <div class="box-one">
+        <h3>some</h3>
+        <p>Retorna true si consigue que un elemento del array cumple con la condición</p>
+        <div class="code">
+          <p>Código ejemplo:</p>
+          <code>const res = array.some(item => item % 2 === 0);</code>
+        </div>
+      </div>
+      <div class="box-one">
+        <h3>every</h3>
+        <p>Retorna True si todos los elementos del array cumplen con la condición</p>
+        <div class="code">
+          <p>Código ejemplo:</p>
+          <code>const total = numArray.every(item => item < 40);</code>
+        </div>
+        <a class="button" href="reto3.html">Reto</a>
+      </div>
+      <div class="box-one">
+        <h3>find</h3>
+        <p>Retorna el objeto o valor del elemento a buscar</p>
+        <div class="code">
+          <p>Código ejemplo:</p>
+          <code>const res = array.find(i => i === 30);</code>
+        </div>
+      </div>
+      <div class="box-one">
+        <h3>find index</h3>
+        <p>Retorna la posición del elemento a buscar en el array</p>
+        <div class="code">
+          <p>Código ejemplo:</p>
+          <code>const res = array.findIndex(i => i === 30);</code>
+        </div>
       </div>
     </div>
   </main>

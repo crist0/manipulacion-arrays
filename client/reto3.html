@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Reto 2: Every</title>
+</head>
+<body>
+  <header>
+    <h1><a href="index.html">Curso de manipulación de Arrays en JavaScript</a></h1>
+  </header>
+  <main>
+    <h2>Reto de edad con Every</h2>
+    <div id="app"></div>
+  </main>
+  <footer>Creado por crist0</footer>
+  <script>
+    const team = [
+      {
+        name: "Nicolas",
+        age: 12,
+      },
+      {
+        name: "Andrea",
+        age: 8,
+      },
+      {
+        name: "Zulema",
+        age: 2,
+      },
+      {
+        name: "Santiago",
+        age: 15,
+      },
+    ];
+
+    const app = document.getElementById('app');
+    const wrapper = document.createElement('ul');
+    const nodes = [];
+    const title = document.createElement('H3');
+    const desc = document.createElement('p');
+    title.innerText = "Lista de jugadores";
+    desc.innerText = "Comprobar que todos sean menores de 15 años";
+    app.append(title, desc);
+    team.forEach(e => {
+      const node = document.createElement('li');
+      node.innerHTML += `${e.name} - <strong>${e.age}</strong>`;
+      wrapper.append(node);
+    });
+    app.appendChild(wrapper);
+
+    const rta = team.every(e => e.age <= 15);
+    const respuesta = document.createElement('h4');
+    rta ? respuesta.innerHTML = "Todos pueden jugar" : respuesta.innerHTML = "No todos pueden jugar";
+    app.appendChild(respuesta);
+  </script>
+</body>
+</html>

@@ -43,3 +43,6 @@ const totalImp2 = orders.map((item) => {
 });
 console.log('Totales IMP 2 ', totalImp2);
 console.log('original ', orders);
+
+
+
